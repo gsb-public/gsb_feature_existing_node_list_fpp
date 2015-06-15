@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GSB Feature Existing Node List FPP feature.
+ */
+
+include_once 'gsb_feature_existing_node_list_fpp.features.inc';
