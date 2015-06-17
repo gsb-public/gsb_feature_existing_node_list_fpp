@@ -5,3 +5,29 @@
  */
 
 include_once 'gsb_feature_existing_node_list_fpp.features.inc';
+
+/*
+ * Implements hook_field_formatter_info_alter().
+ */
+function gsb_feature_existing_node_list_fpp_field_formatter_info_alter(&$info) {
+  $info['entityreference_entity_view']['module'] = 'gsb_feature_existing_node_list_fpp';
+}
+
+/**
+ * Implements hook_field_formatter_prepare_view().
+ */
+function gsb_feature_existing_node_list_fpp_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
+  return entityreference_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, $items, $displays);
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function gsb_feature_existing_node_list_fpp_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  if ($instance['bundle'] === 'existing_node_list' && $field['field_name'] === 'field_existing_node_list_ref') {
+    $display['settings']['view_mode'] = $entity->field_display_option[$entity->language][0]['value'];
+  }
+  $result = entityreference_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display);
+  return $result;
+}
+

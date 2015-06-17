@@ -18,7 +18,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
     'custom_remove' => '',
     'default_value' => array(
       0 => array(
-        'value' => 0,
+        'value' => 'compact',
       ),
     ),
     'deleted' => 0,
@@ -26,11 +26,14 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'list_default',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -57,7 +60,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
         'checkall' => FALSE,
       ),
       'type' => 'options_buttons',
-      'weight' => -1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -73,13 +76,25 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
+        'label' => 'hidden',
+        'module' => 'gsb_feature_existing_node_list_fpp',
         'settings' => array(
           'conditions' => array(),
-          'link' => FALSE,
+          'links' => 0,
+          'view_mode' => 'compact',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'gsb_feature_existing_node_list_fpp',
+        'settings' => array(
+          'conditions' => array(),
+          'links' => 0,
+          'view_mode' => 'compact',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
     ),
@@ -102,7 +117,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => -2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -118,7 +133,16 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'conditions' => array(),
@@ -166,7 +190,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => -3,
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );

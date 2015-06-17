@@ -17,7 +17,7 @@ function gsb_feature_existing_node_list_fpp_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => FALSE,
@@ -37,18 +37,28 @@ function gsb_feature_existing_node_list_fpp_strongarm() {
       'people_fpp' => array(
         'custom_settings' => FALSE,
       ),
+      'compact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'expanded' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
       ),
       'display' => array(
         'title' => array(
           'default' => array(
             'weight' => '-5',
-            'visible' => TRUE,
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '3',
+            'visible' => FALSE,
           ),
         ),
       ),
