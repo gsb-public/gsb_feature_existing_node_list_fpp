@@ -11,7 +11,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-existing_node_list-field_display_option'
+  // 'fieldable_panels_pane-existing_node_list-field_display_option'.
   $field_instances['fieldable_panels_pane-existing_node_list-field_display_option'] = array(
     'bundle' => 'existing_node_list',
     'custom_add_another' => '',
@@ -66,7 +66,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-existing_node_list-field_existing_node_list_ref'
+  // 'fieldable_panels_pane-existing_node_list-field_existing_node_list_ref'.
   $field_instances['fieldable_panels_pane-existing_node_list-field_existing_node_list_ref'] = array(
     'bundle' => 'existing_node_list',
     'custom_add_another' => '',
@@ -81,6 +81,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'compact',
         ),
         'type' => 'entityreference_entity_view',
@@ -92,6 +93,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'compact',
         ),
         'type' => 'entityreference_entity_view',
@@ -123,7 +125,7 @@ function gsb_feature_existing_node_list_fpp_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-existing_node_list-field_link_single'
+  // 'fieldable_panels_pane-existing_node_list-field_link_single'.
   $field_instances['fieldable_panels_pane-existing_node_list-field_link_single'] = array(
     'bundle' => 'existing_node_list',
     'custom_add_another' => '',
